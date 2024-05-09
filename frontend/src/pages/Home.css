@@ -1,0 +1,92 @@
+.main-content{
+    padding: 1.5rem 2rem;
+}
+.category{
+    margin: 2rem 0;
+}
+.category h1{
+    line-height: 4rem;
+    padding-left: 2rem;
+}
+.card{
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 0.6rem;
+    margin: 1rem 0.2rem;
+}
+.card img{
+    border-radius: 0.6rem 0.6rem 0 0;
+}
+.card p{
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 2rem;
+}
+.group{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+}
+
+/* show of the website */
+
+.home-show{
+    display: flex;
+    padding: 0 2rem;
+    justify-content: space-around;
+}
+.services{
+    width: 35%;
+    height: 100%;
+}
+.services h1{
+    padding: 1rem 0;
+    font-weight: 500;
+}
+.service-group{
+    border: 1px solid rgba(0,0,0,0.4);
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+.service-group h2{
+    font-size: 1.2rem;
+    text-align: center;
+    color: rgba(0,0,0,0.8);
+}
+.choose-service{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.service{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: rgba(0,0,0,0.2);
+    /* border: 1px solid rgba(0,0,0,0.4); */
+    border-radius: 0.5rem;
+}
+.service i{
+    font-size: 1.5rem;
+}
+.service p{
+    font-size: 1.2rem;
+}
+
+/* grid */
+.grid {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.grid img{
+   width: 40%;
+   margin: 0.3rem;
+   border-radius: 1rem;
+}

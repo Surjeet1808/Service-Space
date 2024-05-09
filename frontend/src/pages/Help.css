@@ -1,0 +1,55 @@
+.help{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.faq-container{
+    width: 50%;
+    padding: 2rem;
+    border: 1px solid rgb(102, 97, 97);
+    border-radius: 2rem;
+    margin: 2rem 0;
+}
+#faq-heading{
+    text-align: center;
+    padding-top: 1rem;
+}
+#faq-subheading{
+    text-align: center;
+    color: rgb(99, 92, 92);
+    padding: 0.5rem 20% 1rem 20%;
+}
+.contactus{
+    width: 50%;
+    margin: 1rem 0 2rem;
+}
+.contactus h2{
+    text-align: center;
+}
+.contactus p{
+    text-align: center;
+    padding: 0.5rem 20% 1rem 20%;
+}
+.contactus form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#contact-btn{
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.3rem 4rem;
+    background-color: black;
+    color: white;
+    border-radius: 1rem;
+    margin: 1rem 0;
+}
+.contactus form input{
+    width: 70%;
+    font-size: 1.3rem;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+}
