@@ -1,27 +1,40 @@
 import "./Help.css"
 import {FAQ} from "../components/FAQ";
+import axios from "axios"
+import { useState,useEffect } from "react";
 
 export const Help=()=>{
+
+    //fatching data from backend
+    let [faqs,setFaqs]=useState([]);
+
+    useEffect(()=>{
+        axios.get("http://localhost:8080/")
+        .then((res)=>{
+           console.log(res.data);
+           setFaqs(res.data);
+        })
+        .catch((err)=>{
+           console.log(err);
+        })
+      },[]) 
+  
+
     return<>
         <div className="help">
             <div className="faq-container">
             <h1 id="faq-heading">Frequently Asked Questions</h1>
             <p id="faq-subheading">Do you need some help with something or do you have questions on some features</p>
-            <FAQ que="this is my question" ans="this is my ans" />
-            <hr />
-            <FAQ que="this is my question" ans="this is my ans" />
-            <hr />
-            <FAQ que="this is my question" ans="this is my ans" />
-            <hr />
-            <FAQ que="this is my question" ans="this is my ans" />
-            <hr />
-            <FAQ que="this is my question" ans="this is my ans" />
-            <hr />
-            <FAQ que="this is my question" ans="this is my ans" />
-            <hr />
-            <FAQ que="this is my question" ans="this is my ans" />
-            <hr />
-            <FAQ que="this is my question" ans="this is my ans" />
+            {faqs.map((faq)=>{
+                return(
+                <>
+
+                <hr />
+                <FAQ que={faq.question} ans={faq.answer} />
+                
+                </>
+            )
+            })}
             </div>
             <div className="contactus">
                 <h2>Have you any other questions or queries</h2>

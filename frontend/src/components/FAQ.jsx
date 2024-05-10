@@ -1,6 +1,7 @@
 import "./FAQ.css"
 import {useState,useRef} from "react"
 export const FAQ=(props)=>{
+
      let [t,set_t]=useState(false);
      let btn=useRef();
      let ansdiv=useRef();
