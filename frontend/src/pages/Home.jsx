@@ -5,7 +5,7 @@ export const Home=()=>{
       <main>
         <div className="main-content">
             
-            <div className="home-show">
+             <div className="home-show">
                 <div className="services">
                  <h1>Home services at your doorstep</h1>
                   <div className="service-group">
