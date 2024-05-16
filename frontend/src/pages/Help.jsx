@@ -9,7 +9,7 @@ export const Help=()=>{
     let [faqs,setFaqs]=useState([]);
 
     useEffect(()=>{
-        axios.get("http://localhost:8080/")
+        axios.get("http://localhost:8080/faqs")
         .then((res)=>{
            console.log(res.data);
            setFaqs(res.data);

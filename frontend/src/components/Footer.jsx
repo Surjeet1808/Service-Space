@@ -4,31 +4,31 @@ export const Footer=()=>{
     return<>
      <footer>
         <div className="footer">
-         <div className="footer-logo">
+         <a href="/"><div className="footer-logo">
             <i class="fa-solid fa-house-chimney-crack"></i>
             <p>Service Space</p>
-         </div>
+         </div></a>
 
          <div className="footer-links">
             <div className="costomer">
             <p>Costomer</p>
             <ul>
-                <li>Login/SignUp</li>
+                <a href="/Login"><li>Login/SignUp</li></a>
                 <a href="/help"><li>Help</li></a>
                </ul>
             </div>
             <div className="company">
               <p>Company</p>
                <ul>
-                <li>About us </li>
-                <li>Terms & conditions</li>
-                <li>Privacy policy</li>
+                <a href="/About"><li>About us </li></a>
+                <a href="/Privacy"><li>Privacy policy</li></a>
                </ul>
             </div>
             <div className="partners">
             <p>Partners</p>
             <ul>
-                <li>Join our team</li>
+                {/* <a href="#"><li>Join as a professional</li></a> */}
+                <a href="/partners"><li>our Partners</li></a>
                </ul>
             </div>
          </div>

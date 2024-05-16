@@ -1,6 +1,7 @@
 header{
     position: sticky;
     top: 0;
+    z-index: 2;
 }
 .container{
     display: flex;
@@ -12,6 +13,10 @@ header{
 }
 .logo{
     display: flex;
+}
+.container a{
+    text-decoration: none;
+    color: black;
 }
 .logo i{
     font-size: 2rem;
@@ -56,6 +61,9 @@ header{
     font-size: 1.5rem;
     padding: 0.3rem 1.5rem;
     cursor: pointer;
+    text-decoration: none;
+    color: black;
+    margin: 0 0.5rem;
 }
 .user :hover{
   background-color: rgba(0,0,0,0.1);

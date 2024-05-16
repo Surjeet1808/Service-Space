@@ -1,12 +1,12 @@
 import "./Navbar.css"
-export const Navbar= (prop)=>{
+export const Navbar= ()=>{
     return <>
       <header>
         <div className="container">
-            <div className="logo">
+            <a href="/"><div className="logo">
             <i class="fa-solid fa-house-chimney-crack"></i>
             <p>Service Space</p>
-            </div>
+            </div></a>
             <div className="search-options">
               <div className="location">
                   <select name="" id="" active>
@@ -23,7 +23,8 @@ export const Navbar= (prop)=>{
               </div>
             </div>
             <div className="user">
-                <button onClick={prop.open} className="login-btn" id="nav-login">Login</button>
+                <a href="/Login" className="login-btn" id="nav-login">Login</a>
+                <a href="/Signup" className="login-btn" id="nav-login">Signup</a>
             </div>
         </div>
       </header>

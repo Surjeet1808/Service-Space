@@ -7,29 +7,20 @@ const workerSchema=new Schema({
     type:String,
     require
    },
-   photo:{
+   Skill:{
     type: String,
     require
    },
-   skill:{
-    type: String,
-    require
-   },
-   contect:{
+   Location:{
+      type: String,
+      require
+     },
+   Contact:{
     type: Number,
-    require
-   },
-   location:{
-    type: String,
-    require
-   },
-   ratting:{
-    type: Number,
-    default: 6,
     require
    }
 });
 
 const Worker = new Model("Worker",workerSchema);
 
-module.exports = Employee;
+module.exports = Worker;

@@ -1,19 +1,10 @@
-const mongoose =require('mongoose');
+const mongoose = require("mongoose");
+const Schema=mongoose.Schema;
+const Model = mongoose.model;
 
-const workSchema=mongoose.Schema({
-    work:{
-        type: String,
-        require
-    },
-    price: {
-        type: Number,
-        require
-    }
-});
 
-const Work=new mongoose.model("Work",workSchema);
-
-const serviceSchema=mongoose.Schema({
+const serviceSchema=Schema({
+    id:String,
     title:{
         type: String,
         require
@@ -28,15 +19,15 @@ const serviceSchema=mongoose.Schema({
         type: Boolean,
         default: true
     },
-    services:[
+    work:[
         {
             service:String,
-            Price:Number
+            price:Number
         }
     ]
 });
 
 
-const Service=new mongoose.model("Service",workSchema);
+const Service=new Model("Service",serviceSchema);
 
 module.exports=Service;
