@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faToolbox} from '@fortawesome/free-solid-svg-icons'
 import {} from '@fortawesome/free-regular-svg-icons'
 import { NavLink } from "react-router-dom"
-export const Cart=()=>{
+const Cart=()=>{
 
     return<>
     <div className="cart">
@@ -104,6 +104,8 @@ export const Cart=()=>{
                  <p>&#8377;2000.00</p>
              </div>
             </div>
+
+            
             <div className="cart-details">
               <div className="totel-charge cart-details-box">
                  <p>Totel</p>
@@ -130,3 +132,5 @@ export const Cart=()=>{
     </div>
     </>
 }
+
+export default Cart;

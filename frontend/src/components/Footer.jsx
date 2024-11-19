@@ -1,6 +1,6 @@
 
 import "./Footer.css"
-export const Footer=()=>{
+export default function Footer(){
     return<>
      <footer>
         <div className="footer">
@@ -33,10 +33,10 @@ export const Footer=()=>{
             </div>
          </div>
          <div className="social-media">
-         <i class="fa-brands fa-square-instagram"></i>
-         <i class="fa-brands fa-linkedin"></i>
-         <i class="fa-brands fa-square-x-twitter"></i>
-         <i class="fa-brands fa-square-facebook"></i>
+         <i className="fa-brands fa-square-instagram"></i>
+         <i className="fa-brands fa-linkedin"></i>
+         <i className="fa-brands fa-square-x-twitter"></i>
+         <i className="fa-brands fa-square-facebook"></i>
          </div>
 
          <hr />

@@ -10,3 +10,10 @@
     font-size: 1.2rem;
     margin: 2rem auto;
 }
+
+@media screen and (max-width: 1200px) {
+    .about p{
+        width: 80%;
+        margin: 1rem auto;
+    }
+}

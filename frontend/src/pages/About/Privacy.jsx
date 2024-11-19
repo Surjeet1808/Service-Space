@@ -1,4 +1,4 @@
-export const Privacy=()=>{
+const Privacy=()=>{
     return<>
      
       <div className="about">
@@ -252,3 +252,5 @@ export const Privacy=()=>{
 
     </>
 }
+
+export default Privacy;

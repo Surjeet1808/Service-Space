@@ -1,0 +1,43 @@
+.tiffin-cards{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    margin: auto;
+}
+
+.tiffin-container p{
+   text-align:center;
+   font-size: 1.2rem;
+   font-weight:600;
+   padding-inline: auto;
+   padding-block: 1rem;
+}
+
+.tiffin-card{
+    width: 13rem;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 0.6rem;
+    margin: 1rem;
+}
+.tiffin-card img{
+    width: 100%;
+    height: 12rem;
+    border-radius: 0.6rem 0.6rem 0 0;
+}
+.tiffin-card p{
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 2rem;
+}
+.tiffin-card a{
+    text-decoration: none;
+    color: black;
+}
+
+@media screen and (max-width: 900px) {
+    .tiffin-card{
+        width: 17rem;
+    }
+}

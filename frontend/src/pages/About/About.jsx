@@ -1,5 +1,5 @@
-import "./About.css"
-export const About=()=>{
+import "./About.css";
+const About=()=>{
     return<>
      
       <div className="about">
@@ -19,3 +19,5 @@ Join the millions of satisfied customers who rely on Service Space for their hom
 
     </>
 }
+
+export default About

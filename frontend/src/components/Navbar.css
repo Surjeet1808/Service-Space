@@ -5,7 +5,8 @@ header{
 }
 .container{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding-inline: 1rem;
     align-items: center;
     background-color: white;
     height: 5rem;
@@ -70,4 +71,23 @@ header{
 }
 .user :active{
     background-color: rgba(0,0,0,0.3);
+}
+
+@media screen AND (max-width: 768px){
+    .search-options{
+        display: none;
+    }
+}
+
+@media screen AND (max-width: 1200px){
+    .logo p{
+        display: none;
+    }
+    .login-btn{
+        font-size: 1.1rem;
+        padding: 0.2rem 1.2rem;
+    }
+    .container{
+        height: 3.5rem;
+    }
 }

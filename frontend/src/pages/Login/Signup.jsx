@@ -1,13 +1,16 @@
+import { useNavigate } from "react-router-dom";
 import "./Login.css"
 import {useState} from "react"
 //import axios from "axios"
 
-export const Signup=()=>{
+export default function Signup({setisLogedIn}){
    const [user,setUser]=useState({
       username:"",
       password:"",
       email:""
    });
+
+   const navigate=useNavigate()
    
    function updateUser(e){
       let name=e.target.name;
@@ -16,17 +19,16 @@ export const Signup=()=>{
          return {...pre,[name]:value}
       });
    }
+
+
    
-   // function register(e){
-   //    e.preventDefault();
-   //    console.log(user);
-   //    console.log("i am tring to save user")
-   //    axios.post("http://localhost:8080/signup",user)
-   //    .then((res)=>{
-   //       console.log(res.data);
-   //    })
-   //    .catch((err)=>console.log("apierr"));
-   // }
+   function handelSubmit(e){
+      e.preventDefault();
+      localStorage.setItem("user",JSON.stringify(user));
+      console.log(user);
+      setisLogedIn(true); // or you can use axios to send the data to the server and set isLogedIn to true when the server response is successful
+      navigate("/")
+   }
 
    return<>
      <div  className="login">
@@ -36,7 +38,7 @@ export const Signup=()=>{
             <input type="email" placeholder="enter email" name="email" onChange={updateUser} value={user.email}/>
             <input type="password" placeholder="password" name="password" onChange={updateUser} value={user.password}/>
             <br />
-            <button class="login-btn">Signup</button>
+            <button onClick={(e)=>handelSubmit(e)} className="login-btn">Signup</button>
         </form>
      </div>
    </>

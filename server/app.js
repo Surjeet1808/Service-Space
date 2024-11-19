@@ -7,7 +7,22 @@ const Category =require("./models/category.js");
 const Service = require("./models/service.js");
 const User= require("./models/user.js");
 const Worker= require("./models/worker.js");
+const ExpressSession = require("express-session")
 
+const passport =require("passport");
+
+
+app.use(ExpressSession({
+  resave: false,
+  saveUninitialized: false,
+  secret: "secret",
+}))
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
 
 app.use(express.json());
@@ -16,7 +31,7 @@ app.use(cors());
 
 
 //connecting database
-const url="mongodb://127.0.0.1:27017/ServiceSpace";
+const url="mongodb+srv://dhakadkrish4:4N1BFdfiwMu2jUlu@cluster0.nq2ja2a.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 main()
 .then(()=>{
     console.log("db is connected");

@@ -2,10 +2,15 @@ import "./Show.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faChevronRight,faChevronLeft,faTruckFast,faHeart} from '@fortawesome/free-solid-svg-icons'
 import {faHeart as farHeart} from '@fortawesome/free-regular-svg-icons'
-import { useState,useEffect } from "react"
+import { useState,useEffect, useContext } from "react"
 import { useParams } from "react-router-dom"
+import { GlobleContext } from "../../context/globelcontext"
 import axios from "axios"
-export const Show=()=>{
+const Show=()=>{
+    
+    const msg=useContext(GlobleContext);
+    console.log(msg)
+
     const [price,setPrice]=useState(499);
     const [like,setLike]=useState(false);
     const [mainimg,setImg]=useState("");
@@ -72,9 +77,11 @@ export const Show=()=>{
             </div>
             <p style={{color:"orange",margin:"0.5rem 0"}}>note: different service have different price select one</p>
             <div className="add-cart">
-                <a href={"/Payment"} id="cart" >Payment</a>
+                <a href={"/Cart"} id="cart" >Payment</a>
             </div>
         </div>
     </div>
     </>
 }
+
+export default Show;

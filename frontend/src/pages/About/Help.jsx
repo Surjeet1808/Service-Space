@@ -1,25 +1,11 @@
 import "./Help.css"
-import {FAQ} from "../components/FAQ";
+import FAQ from "../../components/Subcomponents/FAQ";
 import axios from "axios"
-import { useState,useEffect } from "react";
+import { useState,useEffect, useContext } from "react";
+import { GlobleContext } from "../../context/globelcontext";
 
-export const Help=()=>{
-
-    //fatching data from backend
-    let [faqs,setFaqs]=useState([]);
-
-    useEffect(()=>{
-        axios.get("http://localhost:8080/faqs")
-        .then((res)=>{
-           console.log(res.data);
-           setFaqs(res.data);
-        })
-        .catch((err)=>{
-           console.log(err);
-        })
-      },[]) 
-  
-
+export default function Help(){
+      const {faqs}=useContext(GlobleContext)
     return<>
         <div className="help">
             <div className="faq-container">
@@ -30,7 +16,7 @@ export const Help=()=>{
                 <>
 
                 <hr />
-                <FAQ que={faq.question} ans={faq.answer} />
+                <FAQ key={faq._id} que={faq.question} ans={faq.answer} />
                 
                 </>
             )

@@ -1,5 +1,5 @@
-import { Service } from "./service"
-export const Category=(props)=>{
+import Service from "./Service"
+export default function Category(props){
     
     return<>
     <h1>{props.data.category}</h1>

@@ -9,7 +9,7 @@
     width: 40%;
     padding: 1rem 0;
 }
-.close button{
+.close-button{
     padding: 0.5rem;
     border-radius: 50%;
     background-color: white;
@@ -38,4 +38,11 @@
 .login-form button{
   font-size: 1.1rem;
   font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+    .login-form{
+        width: 70%;
+        margin-top: 10rem;
+    }
 }

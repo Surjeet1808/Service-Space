@@ -1,6 +1,6 @@
 import { useState,useEffect } from "react"
 import axios from "axios"
-export const Service=(props)=>{
+export default function Service(props){
     const [data,setData]=useState([{
         title:"",
         image:[""]
@@ -10,7 +10,7 @@ export const Service=(props)=>{
         if(props.service){
         axios.get(`http://localhost:8080/data/${props.service}`)
         .then((res)=>{
-            console.log(res.data)
+           // console.log(res.data)
             setData(res.data);
         })
         .catch((e)=>{console.log(e.message)})

@@ -1,6 +1,6 @@
 .pcard{
     width: 17%;
-    background: url(../assets/pcard-background.jpg);
+    background: url(../../assets/pcard-background.jpg);
     height: 15rem;
     background-size: 100% 100%;
     border: 2px solid black;

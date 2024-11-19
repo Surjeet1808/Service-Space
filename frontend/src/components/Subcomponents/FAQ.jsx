@@ -1,6 +1,6 @@
 import "./FAQ.css"
 import {useState,useRef} from "react"
-export const FAQ=(props)=>{
+export default function FAQ(props){
 
      let [t,set_t]=useState(false);
      let btn=useRef();

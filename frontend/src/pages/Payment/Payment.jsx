@@ -1,6 +1,6 @@
 import "./Payment.css"
 import {NavLink} from "react-router-dom"
-export const Payment=()=>{
+const Payment=()=>{
     return<>
     <div className="payment">
         <div className="pay">
@@ -18,3 +18,5 @@ export const Payment=()=>{
     </div>
     </>
 }
+
+export default Payment;

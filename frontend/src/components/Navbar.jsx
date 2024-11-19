@@ -1,10 +1,25 @@
+import { useEffect, useState } from "react"
 import "./Navbar.css"
-export const Navbar= ()=>{
-    return <>
+import { NavLink, useNavigate } from "react-router-dom";
+export default function Navbar({isLogedIn,setisLogedIn}){
+   const [user,setUser]=useState(null);
+   const navigate=useNavigate();
+   useEffect(()=>{
+      if(localStorage.getItem("user")){
+         setUser(JSON.parse(localStorage.getItem("user")));
+      }
+   },[]);
+   function handleLogout(){
+    localStorage.removeItem("user");
+    setUser(null);
+    setisLogedIn(false);
+    navigate("/login");
+    }
+    return(<>
       <header>
         <div className="container">
             <a href="/"><div className="logo">
-            <i class="fa-solid fa-house-chimney-crack"></i>
+            <i className="fa-solid fa-house-chimney-crack"></i>
             <p>Service Space</p>
             </div></a>
             <div className="search-options">
@@ -16,17 +31,18 @@ export const Navbar= ()=>{
                   </select>
               </div>
               <div className="searchbar">
-                   <i class="fa-solid fa-magnifying-glass"></i>
-                   <form action="">
+                   <i className="fa-solid fa-magnifying-glass"></i>
+                   <form>
                     <input type="text" placeholder="Search for Service"/>
                    </form>
               </div>
             </div>
-            <div className="user">
-                <a href="/Login" className="login-btn" id="nav-login">Login</a>
-                <a href="/Signup" className="login-btn" id="nav-login">Signup</a>
+            <div className={`user`}>
+                <NavLink to="/Login" className={`login-btn ${isLogedIn?"hide":""}`}id="nav-login">Login</NavLink>
+                <NavLink to="/Signup" className={`login-btn ${isLogedIn?"hide":""}`} id="nav-login">Signup</NavLink>
+                <button className={`login-btn ${!isLogedIn?"hide":""}`} onClick={handleLogout} id="nav-login">Logout</button>
             </div>
         </div>
       </header>
-    </>
+    </>)
 }

@@ -10,7 +10,7 @@ const categorydata=require("./category.js");
 const servicedata=require("./service.js");
 
 
-mongoose.connect("mongodb://127.0.0.1:27017/ServiceSpace")
+mongoose.connect("mongodb+srv://dhakadkrish4:4N1BFdfiwMu2jUlu@cluster0.nq2ja2a.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 .then(()=>console.log("db is connected"))
 .catch(()=>console.log("connection failed"));
 

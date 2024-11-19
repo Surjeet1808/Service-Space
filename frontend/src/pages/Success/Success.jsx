@@ -2,7 +2,7 @@ import "./Success.css"
 import { NavLink } from "react-router-dom"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import {faCircleCheck} from "@fortawesome/free-regular-svg-icons"
-export const Success=()=>{
+const Success=()=>{
     return<>
       <div className="success">
         <div className="success-msg">
@@ -16,3 +16,5 @@ export const Success=()=>{
       </div>
     </>
 }
+
+export default Success;

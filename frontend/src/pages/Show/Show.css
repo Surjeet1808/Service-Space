@@ -1,6 +1,7 @@
 .show{
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
     margin: 3rem 2rem;
     padding: 0;
@@ -132,7 +133,7 @@
     font-size: 1.2rem;
     text-decoration: none;
     color: black;
-    margin: 0.2rem;
+    margin: 0.5rem;
     cursor: pointer;
 }
 #services button:active{
@@ -154,5 +155,24 @@
     justify-content: center;
 }
 
+@media screen AND (max-width:1200px){
+    .show{
+        flex-direction: column;
+        margin: 1rem 0;
+        height: fit-content;
+    }
+    .images{
+        width: 80%;
+        height: fit-content;
+    }
+    .details{
+        width: 70%;
+        height: fit-content;
+        margin: 1rem 0 0;
+    }
+    #main-img{
+        margin-inline: auto;
+    }
+}
 
 

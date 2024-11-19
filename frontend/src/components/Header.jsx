@@ -1,10 +1,14 @@
-export const Header =()=>{
+import './Header.css';
+import { NavLink, useNavigate } from 'react-router-dom';
+export default function Header (){
+    const navigate = useNavigate(); // Import the useNavigate hook from react-router-dom
     return<>
         <div className="home-show">
            <div className="services">
                  <h1>Home services at your doorstep</h1>
                   <div className="service-group">
                     <h2>What are you looking for?</h2>
+                    <button to="/tiffin"  onClick={()=>navigate("/tiffin")} className="tiffin">Tiffin Service</button>
                     <div className="choose-service">
                         <div className="service">
                             <p>Cleaning</p>

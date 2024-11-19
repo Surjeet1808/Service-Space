@@ -35,6 +35,30 @@ const workers=[{name:"Subhadra Trading",Skill:"Electrician",Location:"Karond",Co
 {name:"Durgesh Auto Parts",Skill:"Mechanic",Location:"Karond",Contact:"9425677306"},
 {name:"Siddhant Auto Parts",Skill:"Mechanic",Location:"Karond",Contact:"9993957737"},
 {name:"Somesh Enterprises",Skill:"Electrician",Location:"Karond",Contact:"8770717206"},
-{name:"",Skill:"",Location:"Karond",Contact:""}]
+{name:"A K Electricals",Skill:"Electrician",Location:"Lalghati",Contact:"9893244187"},
+{name:"Sabah Electricals and Repairing",Skill:"Electrician",Location:"Lalghati",Contact:"9229882143"},
+{name:"Rathore Electronic Services",Skill:"Electrician",Location:"Lalghati",Contact:"7999956845"},
+{name:"Vasu Electricals",Skill:"Electrician",Location:"Lalghati",Contact:"9589582714"},
+{name:"Vaishnav Electricals",Skill:"Electrician",Location:"Lalghati",Contact:"9827272100"},
+{name:"Electical Contractor BL Singh",Skill:"Electrician",Location:"Lalghati",Contact:"9826557332"},
+{name:"Electrician Rohit",Skill:"Electrician",Location:"Lalghati",Contact:"8878761397"},
+{name:"Gurudev Electricals",Skill:"Electrician",Location:"Lalghati",Contact:"9826224488"},
+{name:"Vinay Electrician",Skill:"Electrician",Location:"Lalghati",Contact:"8518844032"},
+{name:"5Star Furniture",Skill:"Carpenter",Location:"Abbas Nagar",Contact:"6261826658"},
+{name:"Shreya Interior Work",Skill:"Carpenter",Location:"Govindpura",Contact:"7247683609"},
+{name:"Shravan Interior Work",Skill:"Carpenter",Location:"Govindpura",Contact:"9685794574"},
+{name:"Kusum Interior Work",Skill:"Carpenter",Location:"Govindpura",Contact:"8319561398"},
+{name:"Shivmurat Interior Work",Skill:"Carpenter",Location:"Govindpura",Contact:"9893484321"},
+{name:"Ambaji Paint",Skill:"Carpenter",Location:"Lalghati",Contact:"9893481051"},
+{name:"Woodjee Furniture",Skill:"Carpenter",Location:"Kolua Kalan",Contact:"8319592980"},
+{name:"Anil Plumber",Skill:"Plumber",Location:"Lalghati",Contact:""},
+{name:"Razi Fabrication",Skill:"Plumber",Location:"Peer Gate",Contact:"9399922714"},
+{name:"Plumber Service Bhopal",Skill:"Plumber",Location:"Shahpura",Contact:"7747889619"},
+{name:"Modern Plumber",Skill:"Plumber",Location:"Ashok Vihar",Contact:"9893336838"},
+{name:"Star Plumber",Skill:"Plumber",Location:"Kohefiza",Contact:"9993941316"},
+{name:"MrServicemen",Skill:"Plumber",Location:"Shivaji Nagar",Contact:"9111386250"},
+{name:"",Skill:"Plumber",Location:"Lalghati",Contact:""},
+
+]
 
 module.exports=workers;
