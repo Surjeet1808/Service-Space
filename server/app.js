@@ -8,6 +8,8 @@ const Service = require("./models/service.js");
 const User= require("./models/user.js");
 const Worker= require("./models/worker.js");
 const ExpressSession = require("express-session")
+require('dotenv').config();
+
 
 const passport =require("passport");
 
@@ -31,7 +33,7 @@ app.use(cors());
 
 
 //connecting database
-const url="mongodb+srv://dhakadkrish4:4N1BFdfiwMu2jUlu@cluster0.nq2ja2a.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const url=process.env.DB_URI;
 main()
 .then(()=>{
     console.log("db is connected");
