@@ -8,7 +8,7 @@ export default function Service(props){
     let randindex=Math.floor(Math.random()*4);
     useEffect(()=>{
         if(props.service){
-        axios.get(`https://service-space-p3md.vercel.app/data/${props.service}`)
+        axios.get(`https://service-space-t38t.onrender.com/data/${props.service}`)
         .then((res)=>{
            // console.log(res.data)
             setData(res.data);

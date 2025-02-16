@@ -17,7 +17,7 @@ function Context(prop){
     let [faqs,setFaqs]=useState([]);
 
     async function fatchfaqs(){
-        await axios.get("https://service-space-p3md.vercel.app/faqs")
+        await axios.get("https://service-space-t38t.onrender.com/faqs")
         .then((res)=>{
            setFaqs(res.data);
         })
@@ -26,14 +26,14 @@ function Context(prop){
         })
       } 
     async function fatchPartners(){
-        await axios.get("https://service-space-p3md.vercel.app/workers")
+        await axios.get("https://service-space-t38t.onrender.com/workers")
         .then((res)=>{
             setPartners(res.data);
         })
         .catch((e)=>{console.log(e.message)})
     }
     async function fatchdata(){
-        await axios.get("https://service-space-p3md.vercel.app/data")
+        await axios.get("https://service-space-t38t.onrender.com/data")
         .then((res)=>{
             //console.log(res.data)
             setData(res.data);
