@@ -28,8 +28,12 @@ passport.deserializeUser(User.deserializeUser());
 
 
 app.use(express.json());
-app.use(cors());
-// app.use(express.urlencoded({ extended: true }));
+app.use(cors({
+  origin: true, // Allow all origins
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
+  credentials: true, // Allow credentials (cookies, etc.)
+  allowedHeaders: ['Content-Type', 'Authorization'], // Necessary headers
+}));
 
 
 //connecting database

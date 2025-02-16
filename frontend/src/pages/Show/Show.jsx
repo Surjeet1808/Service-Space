@@ -27,7 +27,7 @@ const Show=()=>{
     });
     let randindex=Math.floor(Math.random()*4);
     useEffect(()=>{
-        axios.get(`http://localhost:8080/data/${id}`)
+        axios.get(`https://service-space-p3md.vercel.app/data/${id}`)
         .then((res)=>{
             console.log(res.data)
             setData(res.data[0]);
